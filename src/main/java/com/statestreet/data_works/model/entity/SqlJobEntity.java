@@ -16,6 +16,8 @@ public class SqlJobEntity {
     @GeneratedValue
     private Long id;
 
+    private Long jobId;
+
     private String content;
 
     private JobStatus status;
