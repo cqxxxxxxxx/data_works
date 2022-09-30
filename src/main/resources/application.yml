@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: data_works
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/data_works?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+      username: root
+      password: 123456
+  jpa:
+    generate-ddl: true
+    database: mysql
+    hibernate:
+      ddl-auto: create
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+      base-path: /actuator
+    enabled-by-default: true
