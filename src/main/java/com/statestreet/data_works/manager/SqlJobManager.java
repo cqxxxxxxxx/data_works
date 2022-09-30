@@ -27,4 +27,8 @@ public class SqlJobManager {
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
+    public SqlJobEntity findById(Long id) {
+        return repository.findById(id).get();
+    }
 }

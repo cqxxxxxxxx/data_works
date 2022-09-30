@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  data-works:
+    image: stt/data-works:latest
+    container_name: data-works
+    volumes:
+      - /Users/cqx/Projects/flink-learning/flink-1.14.6:/data/flink-1.14.6
+    networks:
+      - ec2-user_default
+      - flink-cdc_default
+    ports:
+      - 10000:10000
+networks:
+  ec2-user_default:
+  flink-cdc_default:
+    external: true

@@ -2,10 +2,9 @@ spring:
   application:
     name: data_works
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://localhost:3306/data_works?characterEncoding=UTF-8&useUnicode=true&useSSL=false
-      username: root
-      password: 123456
+    url: jdbc:mysql://localhost:3306/mydb?characterEncoding=UTF-8&useUnicode=true&useSSL=false
+    username: root
+    password: 123456
   jpa:
     generate-ddl: true
     database: mysql
@@ -14,7 +13,9 @@ spring:
 management:
   endpoints:
     web:
-      exposure:
-        include: *
       base-path: /actuator
     enabled-by-default: true
+server:
+  port: 10001
+flink:
+  sql-client: /Users/cqx/Projects/flink-learning/flink-1.14.6/bin/sql-client.sh

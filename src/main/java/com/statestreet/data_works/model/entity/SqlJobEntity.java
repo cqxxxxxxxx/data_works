@@ -3,10 +3,7 @@ package com.statestreet.data_works.model.entity;
 import com.statestreet.data_works.model.constant.JobStatus;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -16,8 +13,9 @@ public class SqlJobEntity {
     @GeneratedValue
     private Long id;
 
-    private Long jobId;
+    private String jobId;
 
+    @Column()
     private String content;
 
     private JobStatus status;

@@ -10,6 +10,8 @@ import com.statestreet.data_works.model.vo.SqlJobVO;
 import com.statestreet.data_works.service.SqlJobService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(Constants.API_PREFIX + "/job/sql")
 public class SqlJobController {
@@ -38,4 +40,5 @@ public class SqlJobController {
         SqlJobVO sqlJobVO = sqlJobService.statusUpdate(updateDTO);
         return Result.success(sqlJobVO);
     }
+
 }
